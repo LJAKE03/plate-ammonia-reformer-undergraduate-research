@@ -1,65 +1,78 @@
-# Instructions for AI assistants and student contributors
+# 项目协作与资料整理规范
 
-## Mission
+本文件用于约束AI助手和参与项目的成员，确保调研结果准确、可追溯，并且真正服务于板式氨重整器的工程制造。
 
-Help students identify and compare methods and technologies for a plate-type catalytic ammonia decomposition reactor. The immediate objective is engineering feasibility and a traceable manufacturing route, not generic literature summaries.
+## 一、项目目标
 
-## Mandatory source discipline
+围绕板式催化氨分解反应器，帮助学生查明可行的结构、催化剂涂覆方法、浆料配方、金属基底、供应商和制造路线。
 
-1. Read the complete source where possible: methods, tables, figures, supplementary information, patents, TDS, SDS, and COA.
-2. Never invent a missing value, slurry recipe, catalyst loading, particle size, coating thickness, process temperature, or supplier capability.
-3. Mark missing data as `Not reported` or `Not verified`.
-4. Preserve the original measurement basis and units. Explicitly distinguish:
-   - wt.% of total slurry;
-   - wt.% relative to catalyst powder;
-   - active-metal loading in the catalyst;
-   - coating loading per unit area;
-   - wet coating mass and dry/calcined coating mass.
-5. Cite page, section, table, figure, or exact official URL for each important extracted value.
-6. Distinguish the authors' own results from data quoted from another paper.
-7. Separate experimental evidence, numerical results, supplier claims, engineering inference, and open questions.
-8. Do not merge formulations from different papers into a new recipe.
-9. Do not infer that a catalyst is washcoat-compatible because it is sold as a packed-bed pellet.
-10. Do not infer that a company can coat corrugated plates because it manufactures ceramic honeycomb catalysts.
+当前阶段的核心目标是判断工程可行性，并建立有证据支持的制造流程，不是泛泛整理氨制氢知识。
 
-## Transferability assessment
+## 二、资料核查要求
 
-For every proposed method, compare:
-- catalyst chemistry and support;
-- powder/particle morphology and size;
-- substrate alloy and surface condition;
-- substrate geometry and scale;
-- coating method and accessibility;
-- drying/calcination atmosphere and temperature;
-- joining sequence and heat-affected zone;
-- reaction temperature, pressure, and gas composition;
-- adhesion/durability test severity.
+1. 尽量阅读论文全文，包括实验方法、表格、图注和补充材料。
+2. 不得编造论文没有提供的数据、浆料配方、催化剂负载量、粒径、涂层厚度、工艺温度或厂家能力。
+3. 没有报告的数据统一写“未报告”；尚未确认的信息写“未核实”。
+4. 保留原始数值、单位和计算基准，尤其区分：
+   - 占浆料总质量的质量百分数；
+   - 相对于催化剂粉末质量的质量百分数；
+   - 催化剂中活性金属的负载量；
+   - 单位面积涂层负载量；
+   - 湿涂层质量与干燥/焙烧后涂层质量。
+5. 重要数据必须标注论文页码、章节、表格、图号或官方网页。
+6. 区分论文作者自己的实验结果与其引用的其他研究。
+7. 明确区分实验事实、数值结果、厂家宣传、工程推断和待解决问题。
+8. 不得把不同论文中的配方拼接成一个新配方。
+9. 不得因为某种催化剂以固定床颗粒形式销售，就认定它可以直接制成涂覆浆料。
+10. 不得因为某企业生产陶瓷蜂窝催化剂，就认定它能够涂覆波纹金属板。
 
-Classify relevance:
-- Direct: same or very similar catalyst, metal substrate, geometry, and process.
-- Partial: one or more important dimensions differ.
-- Background: useful mechanism or manufacturing concept only.
+## 三、判断某种工艺能否用于本项目
 
-## Supplier research rules
+至少比较以下方面：
+- 催化剂组成、载体和颗粒形态；
+- 金属基底牌号及表面状态；
+- 板片几何和尺寸；
+- 涂覆方式及设备可达性；
+- 干燥/焙烧气氛和温度；
+- 焊接顺序及热影响；
+- 反应温度、压力和气体组成；
+- 附着和耐久性测试条件。
 
-- Use official company websites, product pages, technical datasheets, patents, and direct written responses.
-- Record the access date.
-- Grade each capability A/B/C/D using the definitions in README.
-- A company's product portfolio is not proof that it accepts custom work or small orders.
-- Record whether the company can provide samples, powder, pre-made slurry, toll preparation, coating, forming, welding, assembly, and leak testing separately.
-- Never invent a contact person, email address, phone number, price, MOQ, or lead time.
-- Keep private replies and quotations out of this public repository unless explicitly approved for public release.
+相关程度分为：
+- **直接相关：** 催化剂、金属基底、几何和工艺与本项目高度相近。
+- **部分相关：** 有一项或多项重要条件不同，但可借鉴部分方法。
+- **背景参考：** 只能用于解释原理或提供制造思路。
 
-## AI output format
+## 四、供应商调查要求
 
-For a paper: bibliographic record → object and method → extracted tables → process sequence → results → missing data → transferability → exact source locations.
+- 优先使用企业官网、正式产品页面、技术说明书、安全数据表、批次检验报告、专利和企业书面回复。
+- 记录信息访问日期。
+- 按A/B/C/D等级评价企业能力：
+  - A：官方资料或案例明确证明；
+  - B：企业公开宣传具备该能力，但具体材料、尺寸或工艺尚未确认；
+  - C：根据业务方向推测可能具备，尚未确认；
+  - D：没有找到证据。
+- 分别核实催化剂供应、浆料代配、金属板涂覆、板片成形、焊接、组装和气密检测能力。
+- 企业产品目录不等于接受定制；公开宣传不等于能够承接高校小批量订单。
+- 不得编造联系人、电话、邮箱、报价、最小订购量或交期。
+- 公开仓库不得上传私人联系信息、非公开报价和企业保密回复。
 
-For a company: legal/company identity → official evidence → capability matrix → evidence grade → unanswered questions → fit to this project → public source links.
+## 五、统一输出格式
 
-## Writing standard
+论文调研按以下顺序整理：
 
-Use concise technical Chinese. Retain English technical terms in parentheses on first use. Prefer tables for parameters and process comparisons. Avoid promotional language and unsupported superlatives. Do not call a process “mature”, “industrialized”, “optimal”, or “proven” without evidence.
+文献基本信息 → 研究对象和结构 → 催化剂及基底 → 配方和工艺参数 → 涂层质量 → 反应结果 → 未报告数据 → 对本项目的适用性 → 原文位置。
 
-## Safety
+厂家调研按以下顺序整理：
 
-Do not give students permission to perform hazardous operations. Any NH₃/H₂ work, catalyst activation/reduction, high-temperature testing, pressure testing, or gas-system modification requires supervisor approval and approved laboratory procedures.
+企业名称 → 官方资料 → 能力对照表 → 证据等级 → 尚未确认的能力 → 对本项目的适用性 → 需要继续询问的问题。
+
+## 六、文字要求
+
+使用简洁、准确的中文。第一次出现重要英文专业术语时，写出中文名称并在括号中保留英文名称或缩写。尽量用表格说明参数，不使用宣传性语言。
+
+没有充分证据时，不得使用“成熟”“产业化”“最优”“已经验证”等结论。
+
+## 七、安全要求
+
+本科生不得自行开展氨气、氢气、高温压力系统、催化剂还原活化或气路改造操作。所有相关工作必须经过项目负责人批准、完成实验室安全培训，并遵守已批准的实验程序。
